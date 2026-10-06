@@ -61,18 +61,22 @@ function LostFoundLayout({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800">
-      <NavbarComponent
-        profile={profile}
-        handleLogout={handleLogout}
-        onToggleSidebar={() => setIsSidebarOpen((prev) => !prev)}
-        isSidebarOpen={isSidebarOpen}
-      />
+    <div className="min-h-screen bg-slate-50 text-slate-900">
+      <header>
+        <NavbarComponent
+          profile={profile}
+          handleLogout={handleLogout}
+          onToggleSidebar={() => setIsSidebarOpen((prev) => !prev)}
+          isSidebarOpen={isSidebarOpen}
+        />
+      </header>
 
-      <SidebarComponent
-        isSidebarOpen={isSidebarOpen}
-        onCloseMobile={() => setIsSidebarOpen(false)}
-      />
+      <nav aria-label="Menu utama">
+        <SidebarComponent
+          isSidebarOpen={isSidebarOpen}
+          onCloseMobile={() => setIsSidebarOpen(false)}
+        />
+      </nav>
 
       <main className="pt-16 md:pl-64 transition-all">
         <div className="p-4 sm:p-6 lg:p-8 max-w-7xl mx-auto">

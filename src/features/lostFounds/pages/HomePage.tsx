@@ -101,7 +101,7 @@ function HomePage() {
           <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
             Laporan Lost & Founds
           </h1>
-          <p className="text-sm text-slate-500 mt-1">
+          <p className="text-sm text-slate-700 mt-1">
             Kelola dan pantau semua tugas harian Anda secara terorganisir.
           </p>
         </div>
@@ -120,10 +120,10 @@ function HomePage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
         <div className="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs flex items-center justify-between">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+            <p className="text-xs font-semibold uppercase tracking-wider text-slate-600">
               Total Todo
             </p>
-            <h3 className="text-3xl font-black text-slate-800 mt-1">{totalCount}</h3>
+            <p className="text-3xl font-black text-slate-800 mt-1">{totalCount}</p>
           </div>
           <div className="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center">
             <IconChecklist size={26} stroke={2} />
@@ -135,10 +135,10 @@ function HomePage() {
           className="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs flex items-center justify-between"
         >
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+            <p className="text-xs font-semibold uppercase tracking-wider text-slate-600">
               Barang Hilang
             </p>
-            <h3 className="text-3xl font-black text-rose-600 mt-1">{lostCount}</h3>
+            <p className="text-3xl font-black text-rose-600 mt-1">{lostCount}</p>
           </div>
           <div className="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center">
             <IconAlertCircle size={26} stroke={2} />
@@ -150,10 +150,10 @@ function HomePage() {
           className="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs flex items-center justify-between"
         >
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+            <p className="text-xs font-semibold uppercase tracking-wider text-slate-600">
               Barang Ditemukan
             </p>
-            <h3 className="text-3xl font-black text-sky-600 mt-1">{foundCount}</h3>
+            <p className="text-3xl font-black text-sky-600 mt-1">{foundCount}</p>
           </div>
           <div className="w-12 h-12 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center">
             <IconPackage size={26} stroke={2} />
@@ -162,12 +162,12 @@ function HomePage() {
 
         <div className="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs flex items-center justify-between">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+            <p className="text-xs font-semibold uppercase tracking-wider text-slate-600">
               Todo Selesai
             </p>
-            <h3 className="text-3xl font-black text-emerald-600 mt-1">
+            <p className="text-3xl font-black text-emerald-600 mt-1">
               {finishedCount}
-            </h3>
+            </p>
           </div>
           <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
             <IconCircleCheck size={26} stroke={2} />
@@ -176,10 +176,10 @@ function HomePage() {
 
         <div className="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs flex items-center justify-between">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+            <p className="text-xs font-semibold uppercase tracking-wider text-slate-600">
               Sedang Proses
             </p>
-            <h3 className="text-3xl font-black text-amber-600 mt-1">{pendingCount}</h3>
+            <p className="text-3xl font-black text-amber-600 mt-1">{pendingCount}</p>
           </div>
           <div className="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center">
             <IconClock size={26} stroke={2} />
@@ -194,7 +194,7 @@ function HomePage() {
           <div className="relative flex-1 max-w-md">
             <IconSearch
               size={18}
-              className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"
+              className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-600"
             />
             <input
               type="text"
@@ -220,7 +220,7 @@ function HomePage() {
             >
               <IconUser size={14} /> Laporan Saya
             </button>
-            <span className="text-xs font-semibold text-slate-500 uppercase tracking-wide flex items-center gap-1.5">
+            <span className="text-xs font-semibold text-slate-700 uppercase tracking-wide flex items-center gap-1.5">
               <IconFilter size={16} /> Filter:
             </span>
             <div className="inline-flex rounded-xl bg-slate-100 p-1 text-xs font-semibold text-slate-600">
@@ -267,7 +267,7 @@ function HomePage() {
         {/* Responsive Table */}
         <div className="overflow-x-auto">
           <table className="w-full text-left text-sm text-slate-600">
-            <thead className="bg-slate-50/80 text-xs uppercase tracking-wider font-semibold text-slate-500 border-b border-slate-100">
+            <thead className="bg-slate-50/80 text-xs uppercase tracking-wider font-semibold text-slate-700 border-b border-slate-100">
               <tr>
                 <th className="px-5 py-3.5 text-center w-16">ID</th>
                 <th className="px-5 py-3.5">Judul</th>
@@ -280,14 +280,14 @@ function HomePage() {
             <tbody className="divide-y divide-slate-100">
               {loadingTodos && filteredTodos.length === 0 ? (
                 <tr>
-                  <td colSpan={6} className="px-6 py-12 text-center text-slate-400">
+                  <td colSpan={6} className="px-6 py-12 text-center text-slate-600">
                     <IconLoader2 size={36} className="mx-auto text-indigo-600 animate-spin mb-2" />
                     <p className="font-medium text-slate-600">Memuat daftar todo...</p>
                   </td>
                 </tr>
               ) : filteredTodos.length === 0 ? (
                 <tr>
-                  <td colSpan={6} className="px-6 py-12 text-center text-slate-400">
+                  <td colSpan={6} className="px-6 py-12 text-center text-slate-600">
                     <IconChecklist size={40} className="mx-auto text-slate-300 mb-2" />
                     <p className="font-medium">Belum ada data laporan yang cocok.</p>
                   </td>
@@ -299,7 +299,7 @@ function HomePage() {
                     data-testid={`todo-row-${todo.id}`}
                     className="hover:bg-slate-50/70 transition-colors group"
                   >
-                    <td className="px-5 py-4 text-center font-mono text-xs font-bold text-slate-400">
+                    <td className="px-5 py-4 text-center font-mono text-xs font-bold text-slate-600">
                       #{todo.id}
                     </td>
                     <td className="px-5 py-4">
@@ -316,17 +316,17 @@ function HomePage() {
                             {todo.title}
                           </p>
                           {todo.description && (
-                            <p className="text-xs text-slate-400 line-clamp-1 mt-0.5">
+                            <p className="text-xs text-slate-600 line-clamp-1 mt-0.5">
                               {todo.description}
                             </p>
                           )}
                         </div>
                       </div>
                     </td>
-                    <td className="px-5 py-4 hidden md:table-cell text-xs text-slate-500">
+                    <td className="px-5 py-4 hidden md:table-cell text-xs text-slate-700">
                       {formatDate(todo.created_at)}
                     </td>
-                    <td className="px-5 py-4 hidden lg:table-cell text-xs text-slate-500">
+                    <td className="px-5 py-4 hidden lg:table-cell text-xs text-slate-700">
                       {formatDate(todo.updated_at)}
                     </td>
                     <td className="px-5 py-4">

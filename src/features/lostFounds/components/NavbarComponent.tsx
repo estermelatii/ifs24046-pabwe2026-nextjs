@@ -89,13 +89,13 @@ function NavbarComponent({
               <span className="text-sm font-semibold text-slate-800 leading-tight">
                 {profile?.name || "Pengguna"}
               </span>
-              <span className="text-xs text-slate-500 leading-tight">
+              <span className="text-xs text-slate-700 leading-tight">
                 {profile?.email || ""}
               </span>
             </div>
             <IconChevronDown
               size={16}
-              className={`text-slate-400 transition-transform duration-200 ${
+              className={`text-slate-600 transition-transform duration-200 ${
                 dropdownOpen ? "rotate-180" : ""
               }`}
             />
@@ -108,7 +108,7 @@ function NavbarComponent({
             >
               <div className="px-3 py-2 sm:hidden">
                 <p className="text-sm font-semibold text-slate-800">{profile?.name}</p>
-                <p className="text-xs text-slate-500 truncate">{profile?.email}</p>
+                <p className="text-xs text-slate-700 truncate">{profile?.email}</p>
               </div>
 
               <div className="py-1">
@@ -121,7 +121,7 @@ function NavbarComponent({
                   }}
                   className="w-full flex items-center gap-2.5 px-3 py-2 text-sm text-slate-700 rounded-xl hover:bg-slate-100 transition-colors text-left"
                 >
-                  <IconUser size={18} className="text-slate-500" />
+                  <IconUser size={18} className="text-slate-700" />
                   Profil Saya
                 </button>
               </div>

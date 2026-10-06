@@ -49,13 +49,13 @@ function RegisterPage() {
   return (
     <form onSubmit={onSubmitHandler} className="space-y-4">
       <div>
-        <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">
+        <label htmlFor="register-name-input" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
           Nama Lengkap
         </label>
         <div className="relative">
           <IconUser
             size={18}
-            className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"
+            className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-600"
           />
           <input
             type="text"
@@ -63,20 +63,20 @@ function RegisterPage() {
             value={name}
             onChange={onChangeName}
             placeholder="Nama Lengkap Anda"
-            className="w-full pl-10 pr-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 transition-all"
+            className="w-full pl-10 pr-3.5 py-2.5 rounded-xl border border-slate-300 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 transition-all"
             required
           />
         </div>
       </div>
 
       <div>
-        <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">
+        <label htmlFor="register-email-input" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
           Alamat Email
         </label>
         <div className="relative">
           <IconMail
             size={18}
-            className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"
+            className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-600"
           />
           <input
             type="email"
@@ -84,20 +84,20 @@ function RegisterPage() {
             value={email}
             onChange={onChangeEmail}
             placeholder="nama@email.com"
-            className="w-full pl-10 pr-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 transition-all"
+            className="w-full pl-10 pr-3.5 py-2.5 rounded-xl border border-slate-300 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 transition-all"
             required
           />
         </div>
       </div>
 
       <div>
-        <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">
+        <label htmlFor="register-password-input" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
           Kata Sandi
         </label>
         <div className="relative">
           <IconLock
             size={18}
-            className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"
+            className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-600"
           />
           <input
             type="password"
@@ -105,7 +105,7 @@ function RegisterPage() {
             value={password}
             onChange={onChangePassword}
             placeholder="Minimal 6 karakter"
-            className="w-full pl-10 pr-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 transition-all"
+            className="w-full pl-10 pr-3.5 py-2.5 rounded-xl border border-slate-300 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 transition-all"
             required
           />
         </div>
