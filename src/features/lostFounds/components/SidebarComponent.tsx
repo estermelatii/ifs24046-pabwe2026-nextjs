@@ -66,7 +66,7 @@ function SidebarComponent({ isSidebarOpen, onCloseMobile }: SidebarComponentProp
               <p className="px-3 text-xs font-bold uppercase tracking-wider text-slate-600">
                 Menu Utama
               </p>
-              <nav className="mt-3 space-y-1">
+              <nav aria-label="Navigasi utama" className="mt-3 space-y-1">
                 {navItems.map((item) => {
                   const Icon = item.icon;
                   const isActive = item.end

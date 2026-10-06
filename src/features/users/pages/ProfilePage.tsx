@@ -207,31 +207,29 @@ function ProfilePage() {
 
           <form onSubmit={handleUpdateProfile} className="space-y-4">
             <div>
-              <label htmlFor="profile-name-input" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+              <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">
                 Nama Lengkap
               </label>
               <input
                 type="text"
-                id="profile-name-input"
                 data-testid="profile-name-input"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 transition-all"
+                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 transition-all"
                 required
               />
             </div>
 
             <div>
-              <label htmlFor="profile-email-input" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+              <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">
                 Alamat Email
               </label>
               <input
                 type="email"
-                id="profile-email-input"
                 data-testid="profile-email-input"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 transition-all"
+                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 transition-all"
                 required
               />
             </div>
@@ -267,49 +265,46 @@ function ProfilePage() {
 
           <form onSubmit={handleUpdatePassword} className="space-y-4">
             <div>
-              <label htmlFor="current-password-input" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+              <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">
                 Kata Sandi Saat Ini
               </label>
               <input
                 type="password"
-                id="current-password-input"
                 data-testid="current-password-input"
                 value={oldPassword}
                 onChange={(e) => setOldPassword(e.target.value)}
                 placeholder="••••••"
-                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 transition-all"
+                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 transition-all"
                 required
               />
             </div>
 
             <div>
-              <label htmlFor="new-password-input" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+              <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">
                 Kata Sandi Baru
               </label>
               <input
                 type="password"
-                id="new-password-input"
                 data-testid="new-password-input"
                 value={newPassword}
                 onChange={(e) => setNewPassword(e.target.value)}
                 placeholder="Minimal 6 karakter"
-                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 transition-all"
+                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 transition-all"
                 required
               />
             </div>
 
             <div>
-              <label htmlFor="confirm-password-input" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+              <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">
                 Ulangi Kata Sandi Baru
               </label>
               <input
                 type="password"
-                id="confirm-password-input"
                 data-testid="confirm-password-input"
                 value={newPasswordConfirmation}
                 onChange={(e) => setNewPasswordConfirmation(e.target.value)}
                 placeholder="Konfirmasi kata sandi"
-                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 transition-all"
+                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 transition-all"
                 required
               />
             </div>

@@ -5,7 +5,10 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import apiHelper from "../../../helpers/apiHelper";
 import { asyncSetProfile, setIsProfile } from "../../users/states/action";
-import { asyncSetIsAuthLogout, setIsAuthLogoutActionCreator } from "../../auth/states/action";
+import {
+  asyncSetIsAuthLogout,
+  setIsAuthLogoutActionCreator,
+} from "../../auth/states/action";
 import NavbarComponent from "../components/NavbarComponent";
 import SidebarComponent from "../components/SidebarComponent";
 
@@ -51,37 +54,39 @@ function LostFoundLayout({ children }: { children: React.ReactNode }) {
 
   if (!profile) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-50">
+      <main className="min-h-screen flex items-center justify-center bg-slate-50">
         <div className="flex flex-col items-center gap-3">
-          <div className="w-10 h-10 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin" />
-          <p className="text-sm font-medium text-slate-600">Memuat sesi pengguna...</p>
+          <div
+            className="w-10 h-10 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin"
+            role="status"
+            aria-label="Memuat"
+          />
+          <h1 className="text-sm font-medium text-slate-700">
+            Memuat sesi pengguna...
+          </h1>
         </div>
-      </div>
+      </main>
     );
   }
 
+  // Jangan bungkus Navbar/Sidebar dengan <header>/<nav> lagi
+  // (Navbar sudah <header>, Sidebar sudah <aside>+<nav>)
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
-      <header>
-        <NavbarComponent
-          profile={profile}
-          handleLogout={handleLogout}
-          onToggleSidebar={() => setIsSidebarOpen((prev) => !prev)}
-          isSidebarOpen={isSidebarOpen}
-        />
-      </header>
+      <NavbarComponent
+        profile={profile}
+        handleLogout={handleLogout}
+        onToggleSidebar={() => setIsSidebarOpen((prev) => !prev)}
+        isSidebarOpen={isSidebarOpen}
+      />
 
-      <nav aria-label="Menu utama">
-        <SidebarComponent
-          isSidebarOpen={isSidebarOpen}
-          onCloseMobile={() => setIsSidebarOpen(false)}
-        />
-      </nav>
+      <SidebarComponent
+        isSidebarOpen={isSidebarOpen}
+        onCloseMobile={() => setIsSidebarOpen(false)}
+      />
 
       <main className="pt-16 md:pl-64 transition-all">
-        <div className="p-4 sm:p-6 lg:p-8 max-w-7xl mx-auto">
-          {children}
-        </div>
+        <div className="p-4 sm:p-6 lg:p-8 max-w-7xl mx-auto">{children}</div>
       </main>
     </div>
   );

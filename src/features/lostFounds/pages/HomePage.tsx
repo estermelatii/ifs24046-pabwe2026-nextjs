@@ -123,7 +123,7 @@ function HomePage() {
             <p className="text-xs font-semibold uppercase tracking-wider text-slate-600">
               Total Todo
             </p>
-            <p className="text-3xl font-black text-slate-800 mt-1">{totalCount}</p>
+            <h3 className="text-3xl font-black text-slate-800 mt-1">{totalCount}</h3>
           </div>
           <div className="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center">
             <IconChecklist size={26} stroke={2} />
@@ -138,7 +138,7 @@ function HomePage() {
             <p className="text-xs font-semibold uppercase tracking-wider text-slate-600">
               Barang Hilang
             </p>
-            <p className="text-3xl font-black text-rose-600 mt-1">{lostCount}</p>
+            <h3 className="text-3xl font-black text-rose-600 mt-1">{lostCount}</h3>
           </div>
           <div className="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center">
             <IconAlertCircle size={26} stroke={2} />
@@ -153,7 +153,7 @@ function HomePage() {
             <p className="text-xs font-semibold uppercase tracking-wider text-slate-600">
               Barang Ditemukan
             </p>
-            <p className="text-3xl font-black text-sky-600 mt-1">{foundCount}</p>
+            <h3 className="text-3xl font-black text-sky-600 mt-1">{foundCount}</h3>
           </div>
           <div className="w-12 h-12 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center">
             <IconPackage size={26} stroke={2} />
@@ -165,9 +165,9 @@ function HomePage() {
             <p className="text-xs font-semibold uppercase tracking-wider text-slate-600">
               Todo Selesai
             </p>
-            <p className="text-3xl font-black text-emerald-600 mt-1">
+            <h3 className="text-3xl font-black text-emerald-600 mt-1">
               {finishedCount}
-            </p>
+            </h3>
           </div>
           <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
             <IconCircleCheck size={26} stroke={2} />
@@ -179,7 +179,7 @@ function HomePage() {
             <p className="text-xs font-semibold uppercase tracking-wider text-slate-600">
               Sedang Proses
             </p>
-            <p className="text-3xl font-black text-amber-600 mt-1">{pendingCount}</p>
+            <h3 className="text-3xl font-black text-amber-600 mt-1">{pendingCount}</h3>
           </div>
           <div className="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center">
             <IconClock size={26} stroke={2} />
