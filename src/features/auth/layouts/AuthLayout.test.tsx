@@ -1,3 +1,4 @@
+/// <reference types="@testing-library/jest-dom" />
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { screen } from "@testing-library/react";
 import AuthLayout from "./AuthLayout";
@@ -27,42 +28,57 @@ describe("AuthLayout", () => {
   it("should render branding and tabs", () => {
     vi.spyOn(apiHelper, "getAccessToken").mockReturnValue(null);
 
-    renderWithProviders(<AuthLayout />, {
-      preloadedState: {
-        profile: null,
-      },
-    });
+    renderWithProviders(
+      <AuthLayout>
+        <div>child</div>
+      </AuthLayout>,
+      {
+        preloadedState: {
+          profile: null,
+        },
+      }
+    );
 
     expect(screen.getByText("Delcom Lost & Found")).toBeInTheDocument();
     expect(screen.getByText("Masuk Akun")).toBeInTheDocument();
     expect(screen.getByText("Daftar Baru")).toBeInTheDocument();
     expect(screen.getByText("Masuk Akun")).toHaveClass("bg-white");
-    expect(screen.getByText("Daftar Baru")).toHaveClass("text-slate-600");
+    expect(screen.getByText("Daftar Baru")).toHaveClass("text-slate-700");
   });
 
   it("should highlight register tab when on register path", () => {
     mockPathname.mockReturnValue("/auth/register");
     vi.spyOn(apiHelper, "getAccessToken").mockReturnValue(null);
 
-    renderWithProviders(<AuthLayout />, {
-      preloadedState: {
-        profile: null,
-      },
-    });
+    renderWithProviders(
+      <AuthLayout>
+        <div>child</div>
+      </AuthLayout>,
+      {
+        preloadedState: {
+          profile: null,
+        },
+      }
+    );
 
     expect(screen.getByText("Daftar Baru")).toHaveClass("bg-white");
-    expect(screen.getByText("Masuk Akun")).toHaveClass("text-slate-600");
+    expect(screen.getByText("Masuk Akun")).toHaveClass("text-slate-700");
   });
 
   it("should navigate to home if user already logged in with profile", () => {
     vi.spyOn(apiHelper, "getAccessToken").mockReturnValue("valid-token");
 
-    renderWithProviders(<AuthLayout />, {
-      preloadedState: {
-        profile: { id: 1, name: "Logged In User" },
-        isProfile: true,
-      },
-    });
+    renderWithProviders(
+      <AuthLayout>
+        <div>child</div>
+      </AuthLayout>,
+      {
+        preloadedState: {
+          profile: { id: 1, name: "Logged In User" },
+          isProfile: true,
+        },
+      }
+    );
 
     expect(mockPush).toHaveBeenCalledWith("/");
   });
@@ -70,12 +86,17 @@ describe("AuthLayout", () => {
   it("should stay on auth layout if isProfile is true but profile is null", () => {
     vi.spyOn(apiHelper, "getAccessToken").mockReturnValue(null);
 
-    renderWithProviders(<AuthLayout />, {
-      preloadedState: {
-        profile: null,
-        isProfile: true,
-      },
-    });
+    renderWithProviders(
+      <AuthLayout>
+        <div>child</div>
+      </AuthLayout>,
+      {
+        preloadedState: {
+          profile: null,
+          isProfile: true,
+        },
+      }
+    );
 
     expect(screen.getByText("Masuk Akun")).toBeInTheDocument();
   });
