@@ -1,8 +1,7 @@
 import apiHelper from "../../../helpers/apiHelper";
-import { DELCOM_BASEURL } from "@/lib/config";
 
 const lostFoundApi = (() => {
-  const BASE_URL = `${DELCOM_BASEURL}/lost-founds`;
+  const BASE_URL = "https://open-api.delcom.org/api/v1/lost-founds";
 
   function _url(path: string) {
     return BASE_URL + path;
