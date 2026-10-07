@@ -19,6 +19,7 @@ export default defineConfig({
         "src/components/Providers.tsx",
         "src/server.ts",
         "src/types/**",
+        "src/lib/config.ts",
         "next.config.ts",
         "next-env.d.ts",
         "vitest.config.mts",

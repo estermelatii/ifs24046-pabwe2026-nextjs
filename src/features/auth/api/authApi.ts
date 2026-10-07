@@ -1,8 +1,7 @@
 import apiHelper from "../../../helpers/apiHelper";
-import { DELCOM_BASEURL } from "@/lib/config";
 
 const authApi = (() => {
-  const BASE_URL = `${DELCOM_BASEURL}/auth`;
+  const BASE_URL = "https://open-api.delcom.org/api/v1/auth";
 
   function _url(path: string) {
     return BASE_URL + path;
